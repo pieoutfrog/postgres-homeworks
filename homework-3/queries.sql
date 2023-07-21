@@ -52,9 +52,10 @@ WHERE products.product_id IN (
   WHERE quantity = 10
 )
 ORDER BY products.product_id;
-!!!Первый запрос использует оператор INNER JOIN, чтобы объединить таблицы products и order_details по product_id. 
-Затем он выбирает уникальные имена продуктов (product_name), которые имеют соответствующие product_id в таблице order_details. 
-Этот запрос также сортирует результаты по products.product_id.
-!!!Второй запрос использует подзапрос, чтобы выбрать product_id из таблицы order_details, где количество заказанных единиц равно 10. 
+!!!Первый запрос использует подзапрос, чтобы выбрать product_id из таблицы order_details, где количество заказанных единиц равно 10. 
 Затем он выбирает имена продуктов (product_name), которые имеют соответствующие product_id в таблице products.
 Этот запрос сортирует результаты по product_id.
+    
+!!!Второй запрос использует оператор INNER JOIN, чтобы объединить таблицы products и order_details по product_id. 
+Затем он выбирает уникальные имена продуктов (product_name), которые имеют соответствующие product_id в таблице order_details. 
+Этот запрос также сортирует результаты по products.product_id.
